@@ -1,0 +1,31 @@
+{
+  "name": "redsum",
+  "version": "0.0.1",
+  "description": "Easy Reduce Sum",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/redsum.git"
+  },
+  "keywords": [
+    "sum",
+    "array",
+    "reducer",
+    "numbers",
+    "accumulator",
+    "typescript"
+  ],
+  "author": "Khoi-Phong Le",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/phonglk/redsum/issues"
+  },
+  "homepage": "https://github.com/phonglk/redsum#readme",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
