@@ -1,11 +1,13 @@
 {
   "name": "redsum",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Easy Reduce Sum",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,9 @@
   },
   "homepage": "https://github.com/phonglk/redsum#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
   }
 }
