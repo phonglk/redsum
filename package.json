@@ -1,6 +1,6 @@
 {
   "name": "redsum",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Easy Reduce Sum",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,10 @@
     "reducer",
     "numbers",
     "accumulator",
-    "typescript"
+    "typescript",
+    "key",
+    "reduce",
+    "fold"
   ],
   "author": "Khoi-Phong Le",
   "license": "SEE LICENSE IN LICENSE",
