@@ -36,4 +36,4 @@ function redsum(collection: IObjectEntry[], extractorsParam: Extractor | Extract
 
 export default redsum;
 declare var module: any;
-module.export = redsum;
+module.exports = redsum;

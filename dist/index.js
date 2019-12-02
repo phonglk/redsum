@@ -29,4 +29,4 @@ function redsum(collection, extractorsParam) {
     return total;
 }
 exports.default = redsum;
-module.export = redsum;
+module.exports = redsum;
