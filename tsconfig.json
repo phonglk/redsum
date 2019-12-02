@@ -5,7 +5,7 @@
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
-    "types": []
+    "types": ["jest"]
   },
   "include": [
     "lib/**/*"
