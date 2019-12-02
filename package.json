@@ -1,13 +1,15 @@
 {
   "name": "redsum",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easy Reduce Sum",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,10 @@
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "jest": "^24.9.0",
+    "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.2"
   }
 }

@@ -1,24 +1,32 @@
 "use strict";
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-function redsum(collections, extractorsParam) {
-    if (!Array.isArray(collections))
+/* tslint:enable:unified-signatures */
+function redsum(collection, extractorsParam) {
+    if (!Array.isArray(collection)) {
         throw new Error('first parameter must be an array');
-    const extractors = [].concat(extractorsParam);
-    const extractFns = extractors
-        .map(extractor => {
-        if (typeof extractor === 'function')
+    }
+    var extractors = [].concat(extractorsParam);
+    var extractFns = extractors.map(function (extractor) {
+        if (typeof extractor === 'function') {
             return extractor;
-        const accessKey = extractor;
-        const extractorFn = (entry) => entry[accessKey];
+        }
+        var accessKey = extractor;
+        var extractorFn = function (entry) { return entry[accessKey]; };
         return extractorFn;
     });
-    const initialCounts = [...new Array(extractFns.length)].map(() => 0);
-    const total = collections
-        .reduce((counts, entry) => counts.map((prev, i) => prev + extractFns[i](entry)), initialCounts);
-    if (extractFns.length === 1)
-        return total[0]; // if there is only one sum, then return it
+    var initialCounts = __spreadArrays(new Array(extractFns.length)).map(function () { return 0; });
+    var total = collection.reduce(function (counts, entry) { return counts.map(function (prev, i) { return prev + extractFns[i](entry); }); }, initialCounts);
+    if (extractFns.length === 1) {
+        return total[0];
+    } // if there is only one sum, then return it
     return total;
 }
-// sum.extractNested = (key, extractors) => entry => sum(entry[key], extractors)
-// sum.getLengthOf = key => entry => entry[key].length
 exports.default = redsum;
+module.export = redsum;
